@@ -189,8 +189,8 @@
         });
 
         // --- Data Path Functions (Corrected for single team collaboration) ---
-        const getStudentsDocRef = () => doc(db, `artifacts/${appId}/public/data`);
-        const getSessionsCollectionRef = () => collection(db, `artifacts/${appId}/public/sessions`);
+        const getStudentsDocRef = () => doc(db, `artifacts/${appId}/public/data/studentList`);
+        const getSessionsCollectionRef = () => collection(db, `artifacts/${appId}/public/data/sessions`);
 
         // --- Data Handling ---
         function loadStudents() {
@@ -406,7 +406,7 @@
             const encodedUri = encodeURI(csvContent);
             const link = document.createElement("a");
             link.setAttribute("href", encodedUri);
-            link.setAttribute("download", `pve_sped_tracker_sessions_${new Date().toISOString().split('T')[0]}.csv`);
+            link.setAttribute("download", `service_tracking_sessions_${new Date().toISOString().split('T')[0]}.csv`);
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
