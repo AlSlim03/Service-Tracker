@@ -189,7 +189,7 @@
         });
 
         // --- Data Path Functions (Corrected for single team collaboration) ---
-        const getStudentsDocRef = () => doc(db, `artifacts/${appId}/public/data/studentList`);
+        const getStudentsDocRef = () => doc(db, `artifacts/${appId}/public/data`);
         const getSessionsCollectionRef = () => collection(db, `artifacts/${appId}/public/data/sessions`);
 
         // --- Data Handling ---
