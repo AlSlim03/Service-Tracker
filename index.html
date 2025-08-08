@@ -202,8 +202,8 @@
         });
 
         // --- Data Path Functions (Corrected for single team collaboration) ---
-        const getStudentsDocRef = () => doc(db, `artifacts/${appId}/public/data`);
-        const getSessionsCollectionRef = () => collection(db, `artifacts/${appId}/public/sessions`);
+        const getStudentsDocRef = () => doc(db, `artifacts/${appId}/public/data/students/studentList`);
+        const getSessionsCollectionRef = () => collection(db, `artifacts/${appId}/public/data/sessions`);
 
         // --- Data Handling ---
         function loadStudents() {
