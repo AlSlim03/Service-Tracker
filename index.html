@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PVE Sped Tracker</title>
+    <title>Service Tracking</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -42,27 +42,14 @@
             max-width: 500px;
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
-        .toast {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #2d3748;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 8px;
-            z-index: 100;
-            opacity: 0;
-            transition: opacity 0.5s;
-        }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
 
     <div class="container mx-auto p-4 md:p-8 max-w-5xl">
         <header class="text-center mb-8">
-            <h1 class="text-3xl md:text-4xl font-bold text-gray-700">PVE Sped Tracker</h1>
-            <p class="text-gray-500 mt-2">A collaborative tool for your team to track student interventions.</p>
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-700">Service Tracking</h1>
+            <p class="text-gray-500 mt-2">A collaborative tool for your team to track student services.</p>
         </header>
 
         <!-- Student Management -->
@@ -202,8 +189,8 @@
         });
 
         // --- Data Path Functions (Corrected for single team collaboration) ---
-        const getStudentsDocRef = () => doc(db, `artifacts/${appId}/public/data/students/studentList`);
-        const getSessionsCollectionRef = () => collection(db, `artifacts/${appId}/public/data/sessions`);
+        const getStudentsDocRef = () => doc(db, `artifacts/${appId}/public/data`);
+        const getSessionsCollectionRef = () => collection(db, `artifacts/${appId}/public/sessions`);
 
         // --- Data Handling ---
         function loadStudents() {
